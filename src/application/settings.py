@@ -2,7 +2,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'orm-insecure-nq+d055iae-db*73gi%l#pgnc6zcoa)s0itum1lx+c@7ht6s6p'
+SECRET_KEY = 'database-insecure-nq+d055iae-db*73gi%l#pgnc6zcoa)s0itum1lx+c@7ht6s6p'
 
 DEBUG = True
 if DEBUG:
@@ -22,7 +22,7 @@ DJANGO_APPS = [
 ]
 
 CUSTOM_APPS = [
-    'infrastructure.orm.apps.OrmConfig',
+    'infrastructure.database.apps.OrmConfig',
 ]
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
 
@@ -36,8 +36,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'config.urls'
-WSGI_APPLICATION = 'config.wsgi.application'
+ROOT_URLCONF = 'application.urls'
+WSGI_APPLICATION = 'application.wsgi.presentors'
 
 TEMPLATES = [
     {

@@ -1,5 +1,5 @@
-from domain.user import User
-from domain.interfaces.user_repository import UserRepository
+from src.domain.user import User
+from src.domain.interfaces.user_repository import UserRepository
 
 from django.contrib.auth.models import User as DjangoUser
 import sqlite3

@@ -1,6 +1,6 @@
 from sinorstack.controllers import BaseController
 
-from domain.user import User
+from src.domain.user import User
 
 
 class RegisterUserController(BaseController):

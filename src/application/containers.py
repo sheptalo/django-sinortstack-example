@@ -1,11 +1,11 @@
 from dependency_injector import containers, providers
 
-from application.controllers.users import RegisterUserController
-from infrastructure.repositories.user_repository import (
+from src.presentors.controllers.users import RegisterUserController
+from src.infrastructure.repositories.user_repository import (
     DjangoUserRepository,
     SQLiteUserRepository,
 )
-from use_cases.user import RegisterUserUseCase
+from src.domain.use_cases.user import RegisterUserUseCase
 
 
 class DjangoRepositoryContainer(containers.DeclarativeContainer):

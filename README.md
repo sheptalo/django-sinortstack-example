@@ -1,22 +1,34 @@
 # Пример django clean-DI используя архитектуру sinorstack
 
-## start
+# Start project
 
 ```bash
-cd src
-python manage.py runserver
+python .\src\entrypoint.py
 ```
 
-Для того чтобы использовать вместо DJANGO ORM, SQL запросы нужно поменять в `src/config/containers.py` следующее:
+## Start with Django Adapter
+
+```bash
+python .\src\adapters\django\manage.py runserver
+```
+
+# DI
+
+Change repository in 1 line
 
 ```python
-# Вариант для DJANGO ORM
+# DJANGO ORM
 class ApplicationContainer(containers.DeclarativeContainer):
     repositories = providers.Container(DjangoRepositoryContainer)
     ...
 
-# Вариант для SQL
+
+# SQLite
 class ApplicationContainer(containers.DeclarativeContainer):
     repositories = providers.Container(SQLiteRepositoryContainer)
     ...
 ```
+
+# TODO 
+
+- [ ] - pytest tests

@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 
-from config import settings
-from domain.base import BaseEntity
-from domain.core.exceptions import ValidationError
+from src.application import settings
+from src.domain.base import BaseEntity
+from src.application.exceptions import ValidationError
 
 
 @dataclass
