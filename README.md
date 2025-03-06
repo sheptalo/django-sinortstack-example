@@ -1,4 +1,4 @@
-# Пример django clean-DI используя архитектуру sinorstack
+# clean-DI with Django as Adapter
 
 # Start project
 
@@ -17,6 +17,8 @@ python .\src\adapters\django\manage.py runserver
 Change repository in 1 line
 
 ```python
+# src/application/containers.py
+
 # DJANGO ORM
 class ApplicationContainer(containers.DeclarativeContainer):
     repositories = providers.Container(DjangoRepositoryContainer)
@@ -31,4 +33,4 @@ class ApplicationContainer(containers.DeclarativeContainer):
 
 # TODO 
 
-- [ ] - pytest tests
+- [ ] pytest tests
